@@ -1,0 +1,62 @@
+* {
+    /* font-size: 62%; */
+    box-sizing: border-box;
+    padding: 0rem;
+    margin: 0rem;
+}
+
+.header {
+    background-color: orange;
+
+}
+
+.nav {
+    text-align: right;
+
+}
+    .nav__list > li{
+        display: inline-block;
+        margin: 1rem;
+        
+        
+    }
+
+.routes, .section{
+    display: inline-block;
+
+
+} 
+
+
+.routes {
+    background-color: blueviolet;
+    display: inline-block;
+
+
+
+}
+
+.section{
+    background-color: aqua;
+    padding: 1rem;
+    vertical-align: top;
+    position: absolute;
+
+}
+
+
+.box {
+    margin: 1rem;
+    height: 5rem;
+    width: 10rem;
+    background-color: rgb(67, 27, 104);
+
+
+
+
+}
+
+.footer {
+    padding: 2rem;
+    background-color: crimson;
+}
