@@ -58,5 +58,7 @@ async function saveFavouriteMichis() {
 
 
 
+
+
 loadRandomMichis(API_URL_RANDOM);
 loadFavoritesMichis(API_URL_FAVOURITE);
