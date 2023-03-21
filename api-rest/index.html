@@ -1,52 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <button>Cambiar foto</button>
-    <img height="550" alt="foto de gatos aleatorios">
-    <script src="./main.js"></script>
-</body>
-</html><!DOCTYPE html>
-<html lang="en">
-<head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gatitos aleatorios</title>
+  <link rel="stylesheet" href="./style.css">
+  <title>Aplicacion</title>
 </head>
 <body>
-  <h1>Michis App</h1>
+  <h1>Aplicacion</h1>
+  <button onclick="loadMichis()">Recargar</button>
 
-  <section id="randomMichis">
-    <h2>Michis aleatorios</h2>
+  <section>
+    <h2> aleatorios</h2>
     <span id="error"></span>
-
-    <article>
-      <img id="img1" width="150" alt="Foto gatito aleatorio">
-      <button>Guardar michi en favoritos</button>
-    </article>
-
-    <article>
-      <img id="img2" width="150" alt="Foto gatito aleatorio">
-      <button>Guardar michi en favoritos</button>
-    </article>
-    
-
-    <button onclick="reload()">Recargar</button>
+    <div id="randomMichis"></div>
   </section>
   
-  <section id="favoritesMichis">
-    <h2>Michis favoritos</h2>
-
-    <article>
-      <img id="img1" width="150" alt="Foto gatito aleatorio">
-      <button>Sacar al michi de favoritos</button>
-    </article>
+  <section >
+    <h2> favoritos</h2>
+    <div id="favoritesMichis"></div>
+    <!-- Aqui se cargaran las imágenes de fórma dinámica -->
   </section>
 
   <script src="./main.js"></script>
