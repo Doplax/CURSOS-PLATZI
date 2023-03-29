@@ -1,0 +1,46 @@
+.text-tsd {
+    color: aquamarine;
+}
+
+.navar-logo{
+    height: 30px;
+    width: auto;
+}
+
+.carousel-inner div img {
+    max-height: 100vh;
+    object-fit: cover;
+    /*filter: grayscale(70%);*/
+}
+
+#carousel {
+    position: relative;
+}
+
+#carousel .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(0, 0, 0, 0.5);
+    color: white;
+    z-index: 1;
+}
+
+#carousel .overlay .container,
+#carousel .overlay .row {
+    height: 100%;
+ }
+
+#ubicacion {
+    background-color: #273b47;
+}
+
+#footer {
+    background: linear-gradient(90deg, #1c3643, #273b47 25%, #1e5372);
+}
+
+#footer a {
+    color: white;
+}
