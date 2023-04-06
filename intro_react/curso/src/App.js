@@ -15,7 +15,7 @@ const defaultTodos = [
 ]
 
 
-function App(props) {
+function App(props ) {
   const [todos, setTodos] = React.useState(defaultTodos);
   const  [searchValue, setSearchValue] = React.useState('')
 
