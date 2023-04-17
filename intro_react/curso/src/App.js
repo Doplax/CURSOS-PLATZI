@@ -21,12 +21,12 @@ function App(props ) {
 
   
   
-  const completedTodos = todos.filter((todo) => todo.completed == true).length;
+  const completedTodos = todos.filter((todo) => todo.completed === true).length;
   const totalTodos = todos.length
 
   let searchedTodos = [];
 
-  if (!searchValue.length >=1) {
+  if (searchValue.length <= 1) {
       searchedTodos = defaultTodos
     } else {
       searchedTodos = todos.filter((todo) => {
@@ -35,6 +35,10 @@ function App(props ) {
         return todoText.includes(searchText)
       })    
      
+  }
+
+  const completeTodo = (text) => {
+    
   }
 
   return (
