@@ -2,9 +2,10 @@ import React from "react";
 import "./TodoCounter.css";
 
 
-function TodoCounter () {
+function TodoCounter ({total, completed}) {
+    //const { total, completed} = props // En vez de hacerlo aqui, lo hacemos arriba en la funcion directamente
     return(
-        <h2 className="TodoCounter"> Has completado 2 de 3 TODOS </h2>
+        <h2 className="TodoCounter"> Has completado {completed} de {total} TODOS </h2>
     )
 }
 

@@ -4,8 +4,7 @@ import './TodoSearch.css'
 
 
 function TodoSearch ({searchValue, setSearchValue}){
-
-
+    
     const onSearchValueChange = (event) => {
         console.log(event.target.value); // Para ser mas especifico en el valor que buscamos en la consola
         setSearchValue(event.target.value);
@@ -14,12 +13,13 @@ function TodoSearch ({searchValue, setSearchValue}){
     return(
         <>
         <input 
-        className="TodoSearch" 
-        placeholder='Cebolla'
-        onChange={onSearchValueChange}
-        value={searchValue}
+            className="TodoSearch" 
+            placeholder='Cebolla'
+            value={searchValue}
+            onChange={onSearchValueChange}
+
         />
-        {searchValue}</>
+        </>
     )
 }
 

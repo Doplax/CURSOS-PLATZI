@@ -3,7 +3,8 @@ import './TodoItem.css'
 
 function TodoItem(props) {
   const onComplete = () => {
-    alert('ya completaste el todo ' + props.text);
+    console.log("");
+    //props.completed = true
   }
 
   const onDelete = () => {
