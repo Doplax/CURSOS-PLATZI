@@ -1,7 +1,7 @@
 import React from "react";
 
 import "./App.css";
-import { TodoContext } from '../TodoContext'
+import { TodoContext } from '../TodoContext/TodoContext'
 import { TodoCounter } from "../TodoCounter/TodoCounter";
 import { TodoSearch } from "../TodoSearch/TodoSearch";
 import { TodoList } from "../TodoList/TodoList";
@@ -14,7 +14,7 @@ function AppUI() {
       <TodoCounter />
       <TodoSearch />
 
-      <TodoContext.consumer>
+      <TodoContext.Consumer>
         {({ error, loading, searchedTodos, completeTodo, deleteTodo }) => (
           <TodoList>
             {error && <p>Upss... Algo ha salido mal</p>}
@@ -32,7 +32,7 @@ function AppUI() {
             ))}
           </TodoList>
         )}
-      </TodoContext.consumer>
+      </TodoContext.Consumer>
 
       <CreateTodoButton />
     </React.Fragment>
