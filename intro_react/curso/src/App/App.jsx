@@ -26,22 +26,22 @@ function useLocalStorage(itemName, initialValue) {
                 } else {
                     parsedItem = JSON.parse(localStorageItem );
                 }
+                
                 setItem(parsedItem)
+                setLoading(false);
             } catch(error) {
                 setError(error)
-            } finally {
-                setLoading(false);
-            }        
+            }       
         },1000)
     })
-
-    //const [item, setItem] = React.useState(parsedItem);
 
     const saveItem = (newItem) => {
         try {
             const stringifiedItem = JSON.stringify(newItem);
             localStorage.setItem(itemName,stringifiedItem)
             setItem(newItem);
+
+            
         } catch(error) {
             setError(error)
         }
@@ -52,9 +52,12 @@ function useLocalStorage(itemName, initialValue) {
 
 
 function App() {
-
-
-    const [todos, setTodos] = useLocalStorage('TODOS_V1', []);
+    const {
+        item: todos,
+        saveItem: saveTodos,
+        loading,
+        error,
+    } = useLocalStorage('TODOS_V1', []);
     const [searchValue, setSearchValue] = React.useState("");
 
     const completedTodos = todos.filter((todo) => todo.completed === true).length;
@@ -73,11 +76,7 @@ function App() {
         });
     }
 
-    const saveTodos = (newTodos) => {
-        const stringifiedTodos = JSON.stringify(newTodos)
-        localStorage.setItem('TODOS_V1', stringifiedTodos);
-        setTodos(newTodos)
-    }
+
 
     const completeTodo = (text) => {
         const todoIndex = todos.findIndex((todo) => todo.text === text);
@@ -96,6 +95,8 @@ function App() {
 
     return (
         <AppUI
+            loading={loading}
+            error={error}
             totalTodos={totalTodos}
             completedTodos={completedTodos}
             searchValue={searchValue}
