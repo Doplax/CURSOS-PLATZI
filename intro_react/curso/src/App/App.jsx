@@ -9,6 +9,18 @@ const defaultTodos = [
 ];
 
 function App() {
+
+//    const localStorageTodos = localStorage.getItem('TODOS_V1');
+//    let parsedTodos;
+
+
+//if (!localStorageTodos) {
+//    localStorageTodos.setItem('TODOS_V1', JSON.stringify([]))
+//    parsedTodos = [];
+//} else {
+//    parsedTodos = JSON.stringify(localStorage)
+//}
+
     const [todos, setTodos] = React.useState(defaultTodos);
     const [searchValue, setSearchValue] = React.useState("");
 
@@ -19,7 +31,7 @@ function App() {
 
     //Logica para filtrar
     if (searchValue.length <= 1) {
-        searchedTodos = defaultTodos;
+        searchedTodos = todos;
     } else {
         searchedTodos = todos.filter((todo) => {
             const todoText = todo.text.toLowerCase();
@@ -28,11 +40,17 @@ function App() {
         });
     }
 
+    const saveTodos = (newTodos) => {
+        const stringifiedTodos = JSON.stringify(newTodos)
+        localStorage.setItem('TODOS_V1', stringifiedTodos);
+        setTodos(newTodos)
+    }
+
     const completeTodo = (text) => {
         const todoIndex = todos.findIndex((todo) => todo.text === text);
         const newTodos = [...todos];
         newTodos[todoIndex].completed = true;
-        setTodos(newTodos);
+        saveTodos(newTodos);
         //
     };
 
@@ -40,7 +58,7 @@ function App() {
         const todoIndex = todos.findIndex((todo) => todo.text === text);
         const newTodos = [...todos];
         newTodos.splice(todoIndex, 1);
-        setTodos(newTodos);
+        saveTodos(newTodos);
     };
 
     return (
