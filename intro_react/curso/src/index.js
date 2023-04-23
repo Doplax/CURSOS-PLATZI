@@ -22,11 +22,11 @@ import './index.css'
 import { App } from './App/App';
 
 
-// Antes
-//ReactDOM.render(
-//    <App/>,
-//    document.getElementById('root')
-//);
+// Forma Antigua
+ReactDOM.render(
+    <App/>,
+    document.getElementById('root')
+);
 
-const root = ReactDOM.createRoot(document.getElementById('root'))
-root.render(<App/>);
+//const root = ReactDOM.createRoot(document.getElementById('root'))
+//root.render(<App/>);
