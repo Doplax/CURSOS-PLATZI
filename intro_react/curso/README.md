@@ -2,11 +2,13 @@
 React
 - useState
 - useEfect
+- ReactContext
 - useContext
 - customHook
 - cratePortal
 - useLocal
-
+- Modal y Formulario
+- Loading Skeletons
 
 
 
