@@ -1,7 +1,8 @@
 import React from "react";
 
 import "./App.css";
-import { TodoContext } from '../TodoContext/TodoContext'
+import { TodoHeader } from '../TodoHeader/TodoHeader';
+import { TodoContext } from '../TodoContext/TodoContext';
 import { TodoCounter } from "../TodoCounter/TodoCounter";
 import { TodoSearch } from "../TodoSearch/TodoSearch";
 import { TodoList } from "../TodoList/TodoList";
@@ -20,13 +21,26 @@ function AppUI() {
     completeTodo, 
     deleteTodo,
     openModal,
-    setOpenModal
+    setOpenModal,
+    totalTodos , 
+    completedTodos,
+    searchValue, 
+    setSearchValue,
    } = React.useContext(TodoContext);
 
   return (
     <React.Fragment>
-      <TodoCounter />
-      <TodoSearch />
+      <TodoHeader>
+                <TodoCounter
+                    totalTodos={totalTodos}
+                    completedTodos={completedTodos}
+                >
+                </TodoCounter>
+                <TodoSearch
+                    searchValue={searchValue}
+                    setSearchValue={setSearchValue}
+                />
+      </TodoHeader>
         <TodoList>
           {error && <p>Upss... Algo ha salido mal</p>}
           {loading && <p>Se está cargando el contenido...</p>}
@@ -42,20 +56,10 @@ function AppUI() {
             />
           ))}
         </TodoList>
-<<<<<<< HEAD
         <Modal >
           <p>Prueba de teletransporte</p>
         </Modal>
       <CreateTodoButton />
-=======
-
-        {openModal && (
-          <Modal>
-            <TodoForm/>
-          </Modal>
-        )}
-      <CreateTodoButton setOpenModal={setOpenModal}/>
->>>>>>> 531d8618f1550d47bb8df176b49cfa7292c62e39
     </React.Fragment>
   );
 }
