@@ -1,12 +1,8 @@
 import React from "react";
-// Importa el hook personalizado useLocalStorage
 import { useLocalStorage } from "./useLocalStorage";
 
-// Crea un contexto para los todos
-const TodoContext = React.createContext();
 
-function TodoProvider(props) {
-  // Utiliza el hook useLocalStorage para manejar el estado y las acciones de los todos
+function useTodos() {
   const {
     item: todos,
     saveItem: saveTodos,
@@ -65,8 +61,7 @@ function TodoProvider(props) {
   const [openModal, setOpenModal] = React.useState(false);
 
   return (
-    <TodoContext.Provider
-      value={{
+      {
         loading,
         error,
         totalTodos,
@@ -78,12 +73,8 @@ function TodoProvider(props) {
         addTodo,
         deleteTodo,
         openModal,
-        setOpenModal,
-      }}
-    >
-      {props.children}
-    </TodoContext.Provider>
-  );
+        setOpenModal
+      });
 }
 
-export { TodoContext, TodoProvider };
+export { useTodos };
