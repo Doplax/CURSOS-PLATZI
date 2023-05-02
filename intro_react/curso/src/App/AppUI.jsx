@@ -7,6 +7,8 @@ import { TodoSearch } from "../TodoSearch/TodoSearch";
 import { TodoList } from "../TodoList/TodoList";
 import { TodoItem } from "../TodoItem/TodoItem";
 import { CreateTodoButton } from "../CreateTodoButton/CreateTodoButton";
+import { Modal } from "../Modal/Modal";
+
 
 function AppUI() {
 
@@ -31,6 +33,9 @@ function AppUI() {
             />
           ))}
         </TodoList>
+        <Modal >
+          <p>Prueba de teletransporte</p>
+        </Modal>
       <CreateTodoButton />
     </React.Fragment>
   );
