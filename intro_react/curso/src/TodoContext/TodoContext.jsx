@@ -36,6 +36,16 @@ function TodoProvider(props) {
     });
   }
 
+  //Función para añadir un nuevo TODO
+  const addTodo = (text) => {
+    const newTodos = [...todos];
+    newTodos.push({
+      completed: false,
+      text,
+    })
+    saveTodos(newTodos)
+  }
+
   // Función para marcar un todo como completado
   const completeTodo = (text) => {
     const todoIndex = todos.findIndex((todo) => todo.text === text);
@@ -52,6 +62,8 @@ function TodoProvider(props) {
     saveTodos(newTodos);
   };
 
+  const [openModal, setOpenModal] = React.useState(false);
+
   return (
     <TodoContext.Provider
       value={{
@@ -63,7 +75,10 @@ function TodoProvider(props) {
         setSearchValue,
         searchedTodos,
         completeTodo,
+        addTodo,
         deleteTodo,
+        openModal,
+        setOpenModal,
       }}
     >
       {props.children}

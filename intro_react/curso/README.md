@@ -1,3 +1,17 @@
+# Tecnologías Utilizadas
+React
+- useState
+- useEfect
+- ReactContext
+- useContext
+- customHook
+- cratePortal
+- useLocal
+- Modal y Formulario
+- Loading Skeletons
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
