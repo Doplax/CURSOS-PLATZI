@@ -34,5 +34,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "React - useState - useEfect - ReactContext - useContext - customHook - cratePortal - useLocal - Modal y Formulario - Loading Skeletons",
+  "main": "index.js",
+  "devDependencies": {},
+  "author": "",
+  "license": "ISC"
 }

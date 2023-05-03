@@ -68,7 +68,7 @@ function App() {
                             onDelete={() => deleteTodo(todo.text)}
                         />
                     )}
-                    
+ 
                 />
                     
                 {openModal && 

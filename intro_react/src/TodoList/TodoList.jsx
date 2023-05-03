@@ -13,7 +13,7 @@ function TodoList(props) {
             {(props.totalTodos && !props.searchedTodos.lenght) && props.onEmptySearchResults()}
 
             <ul>
-                {props.children}
+                {props.TodoList}
             </ul>
         </section>
     )
