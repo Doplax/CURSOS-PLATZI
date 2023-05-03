@@ -5,16 +5,11 @@ function TodoList(props) {
 
     
     return(
-        
         <section className="className-container">
-        {props.error && props.onError()}
-        {props.loading && props.onLoading()}
-        {(props.emptyTodos && !searchedTodos.lenght) && emptyTodos.onEmptyTodos()}
-
-        {se}
-            <ul>
-                {props.children}
-            </ul>
+            {props.error && props.onError()}
+            {props.loading && props.onLoading()}
+            {(!props.loading && !props?.searchedTodos?.length) && props.onEmptyTodos()}
+            {props.searchedTodos.map(todo => props.render(todo))}
         </section>
     )
 }

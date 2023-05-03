@@ -9,6 +9,13 @@ import { TodoItem } from "../TodoItem/TodoItem";
 import { CreateTodoButton } from "../CreateTodoButton/CreateTodoButton";
 import { Modal } from "../Modal/Modal";
 import { TodoForm } from "../TodoForm/TodoForm";
+import { TodosError } from "../TodosError/TodosError";
+import { TodosLoading } from "../TodosLoading/TodosLoading";
+import { EmptyTodos } from "../EmptyTodos/EmptyTodos";
+
+
+
+
 import "./App.css";
 
 
@@ -42,26 +49,24 @@ function App() {
                     />
                 </TodoHeader>
                 <TodoList
-                    onError={() => <ErrorTodos/>}
                     error={error}
-                    onLoading={()=> <OnLoading/>}
                     loading={loading}
+                    searchedTodos={searchedTodos}
+                    onError={() => <TodosError/>}
+                    onLoading={()=> <TodosLoading/>}
                     onEmptyTodos={() => <EmptyTodos/>}
-                    render = {(todo) => {
-                        <TodoItem>
+                    render = {todo => (
+                        <TodoItem
                             key={todo.text}
                             text={todo.text}
                             completed={todo.completed}
                             onComplete={() => completeTodo(todo.text)}
                             onDelete={() => deleteTodo(todo.text)}
-                        </TodoItem>
-                        }}/>
+                        />
+                    )}
                     
+                />
                     
-
-                    
-            
-                
                 {openModal && 
                     <Modal>
                         <TodoForm 
