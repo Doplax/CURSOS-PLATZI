@@ -34,7 +34,7 @@ async function loadRandomMichis(API_URL) {
         article.appendChild(img)
         
         let btn = document.createElement("button")
-        btn.innerText = "Guardar"
+        btn.innerText = "GUARDAR"
         btn.addEventListener("click", () => saveFavouriteMichis(element))
         article.appendChild(btn)
   
@@ -69,7 +69,7 @@ async function loadFavoritesMichis(API_URL) {
       article.appendChild(img)
       
       let btn = document.createElement("button")
-      btn.innerText = "Borrar"
+      btn.innerText = "BORRAR"
       btn.addEventListener("click", ()=> {deleteMichis(element.id)}) // Estaba mandando el id de la foto, tenia que mandar el id del objeto
       article.appendChild(btn)
 

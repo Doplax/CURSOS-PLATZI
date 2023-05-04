@@ -38,6 +38,14 @@ body {
     background-color: #ff6347;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   }
+
+  #randomMichis button:hover {
+    background-color: green;
+  }
+
+  #favoritesMichis button:hover {
+    background-color: red;
+  }
   
   section div {
     width: 100%;
