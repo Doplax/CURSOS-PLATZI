@@ -15,6 +15,8 @@ Este proyecto es una aplicación web que muestra una selección de imágenes de 
 1. Clonar el repositorio
 2. Abrir el archivo `index.html` en el navegador
 3. ¡Disfruta navegando y guardando tus imágenes favoritas de gatos!
+4. Tambien puedes acceder desde [Este enlace](https://doplax-random-michi-api.surge.sh)
+
 
 ## Estructura del código
 
@@ -35,3 +37,4 @@ Contiene la estructura básica del proyecto y enlaces a los archivos de estilos 
 
 Archivo con los estilos CSS para la aplicación.
 
+![Texto alternativo]('./portada.png')

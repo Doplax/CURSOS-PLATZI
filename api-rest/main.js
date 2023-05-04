@@ -61,19 +61,24 @@ async function loadFavoritesMichis(API_URL) {
     
     data.forEach(element => {
       console.log();
-
+    
       let article = document.createElement("article")
+    
+      let imgWrapper = document.createElement("div")
+      imgWrapper.className = "img-wrapper"
+      article.appendChild(imgWrapper)
       
       let img = document.createElement("img")
-      img.src = element.image.url
-      article.appendChild(img)
+      img.src = element.url
+      img.alt = "Imagen de gato" // Añade el atributo alt genérico aquí
+      imgWrapper.appendChild(img)
       
       let btn = document.createElement("button")
-      btn.innerText = "BORRAR"
-      btn.addEventListener("click", ()=> {deleteMichis(element.id)}) // Estaba mandando el id de la foto, tenia que mandar el id del objeto
+      btn.innerText = "GUARDAR"
+      btn.addEventListener("click", () => saveFavouriteMichis(element))
       article.appendChild(btn)
-
-      favoritesMichis.appendChild(article)
+    
+      randomMichis.appendChild(article)
     });
   }
 }
