@@ -37,4 +37,4 @@ Contiene la estructura básica del proyecto y enlaces a los archivos de estilos 
 
 Archivo con los estilos CSS para la aplicación.
 
-![Texto alternativo]('./portada.png')
+![Imagen de los Gatos]('https://github.com/Doplax/CURSOS-PLATZI/blob/main/api-rest/portada.png')
