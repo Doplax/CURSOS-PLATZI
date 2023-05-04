@@ -1,50 +1,35 @@
-# Cat Application
+# Michi Random API
 
-This project is a simple web application that showcases a selection of random cat images and allows users to save their favorite ones.
+Este proyecto es una aplicación web que muestra una selección de imágenes de gatos aleatorias y permite a los usuarios guardar sus imágenes favoritas. La aplicación consume la API pública The Cat API (https://thecatapi.com/) utilizando la función `fetch` de JavaScript para realizar solicitudes HTTP.
 
-## Technologies Used
+## Características
 
-- HTML5
-- CSS3
-- JavaScript (ES6+)
-- The Cat API (https://thecatapi.com/)
+- Muestra una selección de imágenes de gatos aleatorias usando `fetch` para consumir la API
+- Permite a los usuarios guardar sus imágenes favoritas
+- Diseño adaptable y responsive
 
-## Purpose
+## Cómo ejecutar
 
-The purpose of this project is to demonstrate my proficiency in front-end web development using modern technologies, such as HTML5, CSS3, and JavaScript. The application consumes a public API, which highlights my ability to work with APIs and asynchronous programming concepts.
+1. Clonar el repositorio
+2. Abrir el archivo `index.html` en el navegador
+3. ¡Disfruta navegando y guardando tus imágenes favoritas de gatos!
 
-## Features
+## Estructura del código
 
-- Displays a selection of random cat images
-- Allows users to save their favorite cat images
-- Implements a responsive grid layout for better user experience
-- Uses modern CSS techniques for styling and animations
-- Uses modern JavaScript features, such as async/await and fetch API
+### main.js
 
-## How to Run
+- `loadRandomMichis()`: Función que carga las imágenes aleatorias de gatos utilizando `fetch` para realizar una solicitud a la API de The Cat API.
+- `loadFavoritesMichis()`: Función que carga las imágenes favoritas de gatos desde la API utilizando `fetch`.
+- `saveFavouriteMichis(michi)`: Función que guarda una imagen de gato como favorita en la API utilizando `fetch`.
+- `deleteMichis(michi)`: Función que elimina una imagen de gato de los favoritos en la API utilizando `fetch`.
+- `loadMichis()`: Función que llama a las funciones `loadRandomMichis()` y `loadFavoritesMichis()`.
+- `window.onload`: Evento que se dispara al cargar la ventana y ejecuta la función `loadMichis()`.
 
-1. Clone the repository
-2. Open the `index.html` file in your web browser
-3. Enjoy browsing and saving your favorite cat images!
+### index.html
 
+Contiene la estructura básica del proyecto y enlaces a los archivos de estilos y JavaScript. Incluye dos secciones principales: una para las imágenes aleatorias y otra para las imágenes favoritas.
 
-//
-Artículo de LinkedIn:
-Título: Explorando el desarrollo web moderno con una aplicación de gatos
+### style.css
 
-¡Hola a todos!
+Archivo con los estilos CSS para la aplicación.
 
-Hoy me gustaría compartir con ustedes un proyecto en el que he estado trabajando recientemente en mi tiempo libre. Esta aplicación web simple muestra una selección de imágenes de gatos aleatorias y permite a los usuarios guardar sus favoritas.
-
-Utilicé las últimas tecnologías de desarrollo web, como HTML5, CSS3 y JavaScript, para crear una experiencia de usuario atractiva y fluida. Además, la aplicación consume una API pública, lo que demuestra mi capacidad para trabajar con APIs y conceptos de programación asíncrona.
-
-Algunas características clave de la aplicación incluyen:
-
-Visualización de imágenes de gatos aleatorias
-Funcionalidad para guardar imágenes de gatos favoritas
-Diseño de cuadrícula adaptable para una mejor experiencia de usuario
-Uso de técnicas modernas de CSS para estilos y animaciones
-Implementación de características modernas de JavaScript, como async/await y fetch API
-Estoy muy emocionado de continuar aprendiendo y mejorando mis habilidades de desarrollo web. Siempre estoy buscando nuevas oportunidades para crecer y colaborar con otros profesionales apasionados. Si tienen alguna pregunta o comentario sobre el proyecto, ¡no duden en ponerse en contacto conmigo!
-
-¡Gracias por leer, y espero que disfruten de la aplicación de gatos tanto como yo!
